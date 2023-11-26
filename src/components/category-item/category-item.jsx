@@ -10,7 +10,7 @@ const CategoryItem = ({category}) => {
                     backgroundImage: `url(${imageUrl})`}} />
                 <div className="category-body-container">
                     <h1>{title}</h1>
-                    <p1>Shop now!</p1>
+                    <p>Shop now!</p>
                 </div>
         </div>
     )
