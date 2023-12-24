@@ -5,7 +5,8 @@ import {
   signInWithPopup,
   GoogleAuthProvider,
   createUserWithEmailAndPassword,
-  signInWithEmailAndPassword
+  signInWithEmailAndPassword,
+  signOut
 } from 'firebase/auth';
 
 import {
@@ -14,6 +15,7 @@ import {
   getDoc,
   setDoc
 } from 'firebase/firestore'
+import { Await } from 'react-router-dom';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -85,4 +87,6 @@ const firebaseConfig = {
      return signAuthUserWithEmailAndPassword(auth, email, password);
       
     };
+
+    export const signOutUser = () => async () => await signOut(auth);
   
